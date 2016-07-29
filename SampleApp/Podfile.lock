@@ -1,0 +1,12 @@
+PODS:
+  - PianoComposer (1.0.0-alpha2)
+
+DEPENDENCIES:
+  - PianoComposer (~> 1.0.0-alpha2)
+
+SPEC CHECKSUMS:
+  PianoComposer: 7a1becb4c5cc49571792f4c249768cc5366e36db
+
+PODFILE CHECKSUM: 8ee2608b878560aa5a0332dc4b5e708dd0eb409c
+
+COCOAPODS: 1.0.0
