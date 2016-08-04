@@ -3,8 +3,6 @@ import PianoComposer
 
 class ViewController: UIViewController {
     
-    let janrainUserProvider = "janrain"
-    
     var composer: PianoComposer?
     
     override func viewDidLoad() {
@@ -50,7 +48,7 @@ extension ViewController: PianoComposerDelegate {
     }
     
     func showLogin(composer: PianoComposer, event: XpEvent, params: ShowLoginEventParams?) {
-        if params?.userProvider == janrainUserProvider {
+        if params?.userProvider == PianoComposer.janrainUserProviderName {
             showJanrainLoginForm(composer)
         }
     }
@@ -60,8 +58,7 @@ extension ViewController: JRCaptureDelegate {
     
     func captureDidSucceedWithCode(code: String!) {
         print("Login succeeded: accessToken: \(JRCapture.getAccessToken())");
-        composer?.userToken(JRCapture.getAccessToken())
-            .userProvider(janrainUserProvider)
+        composer?.userToken(JRCapture.getAccessToken())            
             .execute()
     }
 }
